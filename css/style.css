@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --roboto-font: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+}
+html,
+body {
+  font-size: 18px;
+  font-family: var(--roboto-font);
+}
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "hero"
+    "content";
+  min-height: 100vh;
+  grid-template-rows: 15% 85%;
+}
+.hero {
+  background-color: burlywood;
+  grid-area: "hero";
+}
+.content {
+  background-color: cadetblue;
+  grid-area: "content";
+}
