@@ -9,12 +9,90 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Odin | Landing Page</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="hero"></header>
-      <main class="content"></main>
+      <header class="hero">
+        <div class="hero__content">
+          <img src="./img/Palm Logo.png" alt="Oasis Logo" />
+          <h1 class="hero__txt">Oasis</h1>
+        </div>
+      </header>
+      <main class="content">
+        <section class="landing-page-txt">
+          <div class="container container--top">
+            <p>
+              This is not a real online service! Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Necessitatibus, commodi!
+            </p>
+            <p>Sign Up <em>now</em> to get started</p>
+            <p class="spaced-txt">You know <em>you</em> want to</p>
+          </div>
+        </section>
+        <section class="landing-page-form">
+          <form action="#" class="form">
+            <h3 class="form__title">Let's do this!</h3>
+            <div class="container--grid">
+              <div class="form__input">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  placeholder="John"
+                />
+              </div>
+              <div class="form__input">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Doe"
+                />
+              </div>
+              <div class="form__input">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@gmail.com"
+                />
+              </div>
+              <div class="form__input">
+                <label for="telephone-number">Telephone Number</label>
+                <input
+                  type="tel"
+                  name="telephone-number"
+                  id="telephone-number"
+                  placeholder="(xxx)xxx-xxxx"
+                />
+              </div>
+              <div class="form__input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+              <div class="form__input">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  required
+                />
+              </div>
+            </div>
+          </form>
+          <div class="container">
+            <button type="submit">Create Account</button>
+            <span class="login"
+              >Already have an account? <a href="#">Login</a></span
+            >
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>

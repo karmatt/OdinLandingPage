@@ -7,11 +7,42 @@
 }
 :root {
   --roboto-font: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+  --primary-color: #4589c9;
 }
 html,
 body {
   font-size: 18px;
   font-family: var(--roboto-font);
+}
+img {
+  height: 50%;
+  margin-right: 20px;
+}
+form {
+  box-shadow: 0px 5px 21px -4px #b2b2b2;
+}
+label {
+  padding-bottom: 8px;
+}
+input {
+  height: 30px;
+}
+input[type="password"] input[placeholder],
+input[value] {
+  padding-left: 5px;
+}
+button {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
 }
 .wrapper {
   display: grid;
@@ -19,13 +50,93 @@ body {
     "hero"
     "content";
   min-height: 100vh;
-  grid-template-rows: 15% 85%;
+  grid-template-rows: 10% 90%;
 }
 .hero {
-  background-color: burlywood;
+  background-image: url("../img/oasis.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   grid-area: "hero";
 }
+.hero__content {
+  align-items: center;
+  background-color: rgba(1, 1, 1, 0.6);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+.hero__txt {
+  color: var(--primary-color);
+}
 .content {
-  background-color: cadetblue;
   grid-area: "content";
+}
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  row-gap: 15px;
+  text-align: center;
+}
+.container--grid {
+  display: grid;
+  grid-template-areas:
+    "input"
+    "input"
+    "input"
+    "input"
+    "input"
+    "input";
+  grid-template-rows: repeat(6, 1fr);
+  padding: 20px 0 20px 30px;
+  row-gap: 15px;
+}
+.container--top {
+  margin-top: 20px;
+}
+.form__title {
+  font-size: 1.3rem;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  grid-area: "input";
+  width: 80%;
+}
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+  a:hover {
+    color: darkgray;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 40rem) {
+  img {
+    height: 90%;
+  }
+  .wrapper {
+    grid-template-areas: "hero content";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+  }
+  .hero__content {
+    height: 10%;
+    margin-top: 120px;
+  }
+  .container {
+    align-items: flex-start;
+    padding-left: 30px;
+    text-align: left;
+  }
+  .container--top {
+    margin-top: 80px;
+  }
 }
