@@ -13,6 +13,7 @@ html,
 body {
   font-size: 18px;
   font-family: var(--roboto-font);
+  line-height: 1.4;
 }
 img {
   height: 50%;
@@ -20,6 +21,8 @@ img {
 }
 form {
   box-shadow: 0px 5px 21px -4px #b2b2b2;
+  -webkit-box-shadow: 0px 5px 21px -4px #b2b2b2;
+  -moz-box-shadow: 0px 5px 21px -4px #b2b2b2;
 }
 label {
   padding-bottom: 8px;
@@ -27,7 +30,8 @@ label {
 input {
   height: 30px;
 }
-input[type="password"] input[placeholder],
+input[type="password"],
+input[placeholder],
 input[value] {
   padding-left: 5px;
 }
@@ -76,11 +80,12 @@ a {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  margin: 20px 0;
   row-gap: 15px;
   text-align: center;
 }
 .container--grid {
+  justify-items: center;
   display: grid;
   grid-template-areas:
     "input"
@@ -90,7 +95,7 @@ a {
     "input"
     "input";
   grid-template-rows: repeat(6, 1fr);
-  padding: 20px 0 20px 30px;
+  padding: 20px 0;
   row-gap: 15px;
 }
 .container--top {
@@ -98,14 +103,13 @@ a {
 }
 .form__title {
   font-size: 1.3rem;
-  padding-left: 30px;
   padding-top: 15px;
+  text-align: center;
 }
 .form__input {
-  display: flex;
-  flex-direction: column;
-  grid-area: "input";
-  width: 80%;
+  display: grid;
+  text-align: center;
+  width: 75%;
 }
 @media (hover: hover) and (pointer: fine) {
   button:hover {
@@ -120,7 +124,7 @@ a {
 }
 @media screen and (min-width: 40rem) {
   img {
-    height: 90%;
+    height: 100%;
   }
   .wrapper {
     grid-template-areas: "hero content";
@@ -135,6 +139,24 @@ a {
     align-items: flex-start;
     padding-left: 30px;
     text-align: left;
+  }
+  .container--grid {
+    column-gap: 20px;
+    grid-template-areas:
+      "input input"
+      "input input"
+      "input input";
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: left;
+    padding: 20px 30px;
+  }
+  .form__title {
+    padding-left: 30px;
+    text-align: left;
+  }
+  .form__input {
+    text-align: left;
+    width: 100%;
   }
   .container--top {
     margin-top: 80px;
